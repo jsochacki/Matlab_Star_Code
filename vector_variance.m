@@ -1,0 +1,6 @@
+function [output]=vector_variance(input)
+    if size(input,2) < size(input,1), input=input.';, end;
+    output=(1/(size(input,2)-1))*...
+        ((input-(input*ones(size(input,2),1))/size(input,2))*...
+        (input-(input*ones(size(input,2),1))/size(input,2))');
+end
